@@ -1,0 +1,33 @@
+.poll{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 30px 0;
+    
+    box-shadow: 0px 0px 10px 0px;
+}
+
+.desc{
+    /* border: 2px solid black; */
+    border-radius: 10px;
+
+    padding: 10px;
+    margin: 10px;
+}
+
+/* .share{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+} */
+
+.polls{
+    margin: 0 auto;
+    width: 50%;
+}
+
+#poll-form label p{
+    display: inline-block;
+}
+
+

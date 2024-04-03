@@ -1,0 +1,54 @@
+<style>
+    *{
+        text-decoration: none;
+    }
+
+    .navbar{
+        background-color: crimson;
+        padding: 0 15px 0 15px;
+    }
+
+    .navdiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navList li{
+        list-style: none;
+        display: inline-block;
+    }
+
+    .navLogo a{
+        font-size: 35px;
+        font-weight: 600;
+        color: white;
+    }
+    
+    .navList li a{
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 25px;
+    }
+</style>
+
+
+
+
+
+<nav class="navbar">
+    <div class="navdiv">
+        <div class="navLogo"><a href="#">CampusPoll</a></div>
+        <ul class="navList">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Create Polls</a></li>
+            <li><a href="#">My Polls</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#">Search Bar</a></li>
+            <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+            <li><a href="http://localhost:8080/posts/login">Login/Register</a></li>
+        </ul>
+    </div>
+</nav>

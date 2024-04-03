@@ -1,0 +1,9 @@
+Project Title 1(First Choice)
+*
+Voting System
+Project Description
+*
+Create a comprehensive voting application where users can either log in or register to
+participate. Users should be able to view a list of active polls without logging in, vote on polls,
+and subscribe to poll results to receive email notifications. Additionally, users should have the
+capability to create their polls and invite others to participate.
