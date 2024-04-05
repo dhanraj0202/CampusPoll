@@ -14,14 +14,69 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get('/', (req,res)=>{
-    res.render('home.ejs')
+let polls = [
+    {
+        title: " Are you satisfied with the teaching staff and their teaching methods?",
+        options: [
+            "Extremely satisfied",
+            "Very satisfied",
+            "Satisfied",
+            "Neutral",
+            "Dissatisfied",
+            "Very dissatisfied",
+            "Extremely dissatisfied",
+        ]
+    },
+    {
+        title: " How satisfied are you with the facilities provided by the college?",
+        options: [
+            "Extremely satisfied",
+            "Very satisfied",
+            "Satisfied",
+            "Neutral",
+            "Dissatisfied",
+            "Very dissatisfied",
+            "Extremely dissatisfied",
+        ]
+    },
+    {
+        title: " Do you feel it is easier to register for different courses within the college?",
+        options: [
+            "Extremely satisfied",
+            "Very satisfied",
+            "Satisfied",
+            "Neutral",
+            "Dissatisfied",
+            "Very dissatisfied",
+            "Extremely dissatisfied",
+        ]
+    },
+    {
+        title: " How satisfied are you with the cleanliness and variety of food items available in the cafeteria?",
+        options: [
+            "Extremely satisfied",
+            "Very satisfied",
+            "Satisfied",
+            "Neutral",
+            "Dissatisfied",
+            "Very dissatisfied",
+            "Extremely dissatisfied",
+        ]
+    }
+]
+
+app.get('/', (req, res) => {
+    res.render('home.ejs', { polls });
 })
 
-app.get('/posts/login', (req,res) =>{
+app.get('/posts/login', (req, res) => {
     res.render("login.ejs")
 })
 
-app.listen(port,()=>{
+app.get('/posts/new', (req, res) => {
+    res.render("new.ejs")
+})
+
+app.listen(port, () => {
     console.log(`listening on port ${port}`);
 });
