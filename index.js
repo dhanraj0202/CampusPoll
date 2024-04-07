@@ -60,7 +60,7 @@ let polls = [
             "Neutral",
             "Dissatisfied",
             "Very dissatisfied",
-            "Extremely dissatisfied",
+            "forcefully",
         ]
     }
 ]
@@ -69,12 +69,19 @@ app.get('/', (req, res) => {
     res.render('home.ejs', { polls });
 })
 
-app.get('/posts/login', (req, res) => {
+app.get('/polls/login', (req, res) => {
     res.render("login.ejs")
 })
 
-app.get('/posts/new', (req, res) => {
+app.get('/polls/new', (req, res) => {
     res.render("new.ejs")
+})
+
+app.post('/',(req,res)=>{
+    console.log(req.body);
+    let {title, options} = req.body;
+    polls.push({title,options});
+    res.redirect("/")
 })
 
 app.listen(port, () => {

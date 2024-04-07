@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Poll</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <form class="newPoll" method="post" action="">
-        <p>Enter the question:</p>
-        <input placeholder="write your question" name="content" rows="5" cols="50"></textarea><br><br>
-        Enter the options:
-        <ul>
-            <li><input type="text" name="" id=""></li>
-            <li><input type="text" name="" id=""></li>
-            <li><input type="text" name="" id=""></li>
-            <li><input type="text" name="" id=""></li>
-        </ul>
-        <button>Submit</button>
-    </form>
+    <%- include("includes/navbar") %>
+
+        <div class="newPoll-container">
+            <div class="newPoll">
+
+
+                <h2>Create a new poll</h2>
+                <form class="newPoll-form" method="post" action="/">
+                    <p>Title</p>
+                    <input placeholder="Type your question here" name="title" class="title"></textarea><br><br>
+                    <p>Enter the options</p>
+                    <div id="optionsContainer">
+                        <input type="text" id="option1" name="options" placeholder="Option 1"><br>
+                        <input type="text" id="option2" name="options" placeholder="Option 2"><br>
+                    </div>
+                    <br>
+                    <button type="button" id="addOption">Add Option</button>
+                    <br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <%- include("includes/contact") %>
+            <%- include("includes/footer") %>
+            <script>
+                document.getElementById('addOption').addEventListener('click', function() {
+                    const container = document.getElementById('optionsContainer');
+                    const optionCount = container.querySelectorAll('input[type="text"]').length + 1;
+                    const input = document.createElement('input');
+                    input.setAttribute('type', 'text');
+                    input.setAttribute('id', 'option' + optionCount);
+                    input.setAttribute('name', 'options');
+                    input.setAttribute('placeholder', 'Option ' + optionCount);
+        
+                    container.appendChild(input);
+                    container.appendChild(document.createElement('br'));
+                }); 
+            </script>
 </body>
+
 </html>
