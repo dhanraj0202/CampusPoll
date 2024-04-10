@@ -14,8 +14,8 @@
 
             <div class="login">Login</div>
             <form class="login-form" action="">
-                <div class="username">
-                    <input type="text" placeholder="Email Address" id="username">
+                <div class="email">
+                    <input type="text" placeholder="Email Address" id="email">
                 </div>
                 <div class="password">
                     <input type="password" placeholder="Password" id="password">
@@ -33,9 +33,12 @@
                 <button type="submit" class="login-btn">Login</button>
             </form>
             <div class="notMember">
-                Not a member? <a href="">Signup now</a>
+                Not a member? <a href="/polls/signup">Signup now</a>
             </div>
         </div>
     </div>
+    <br><br>
+        <%- include("includes/contact") %>
+            <%- include("includes/footer") %>
 </body>
 </html>

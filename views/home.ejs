@@ -30,7 +30,7 @@
                             </h2>
                             <form id="poll-form">
                                 <% for(option of poll.options) { %>
-                                    <input type="radio" name="option" id="<%= poll.title %>+<%=option %>">
+                                    <input type="radio" name="<%= option %>" id="<%= poll.title %>+<%=option %>">
                                     <label for="<%= poll.title %>+<%=option %>">
                                         <%= option %>
                                     </label><br>

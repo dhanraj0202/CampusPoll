@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include("includes/navbar") %>
+
+    <div class="signup-container">
+        <div class="signup-wrapper">
+
+            <div class="signup">SignUp</div>
+            <form class="signup-form" action="">
+                <div class="username">
+                    <input type="text" placeholder="Username" id="username">
+                </div>
+                <div class="email">
+                    <input type="text" placeholder="Email Address" id="email">
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password" id="password">
+                </div>
+                
+                <button type="submit" class="signup-btn">SignUp</button>
+            </form>
+            <div class="aMember">
+                Already a member? <a href="login">Login now</a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+        <%- include("includes/contact") %>
+            <%- include("includes/footer") %>
+</body>
+</html>

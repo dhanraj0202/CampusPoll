@@ -73,6 +73,10 @@ app.get('/polls/login', (req, res) => {
     res.render("login.ejs")
 })
 
+app.get('/polls/signup', (req, res) => {
+    res.render("signup.ejs")
+})
+
 app.get('/polls/new', (req, res) => {
     res.render("new.ejs")
 })
