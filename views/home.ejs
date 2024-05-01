@@ -31,15 +31,14 @@
                             <form id="poll-form">
                                 <% for(option of poll.options) { %>
                                     <div class="poll-option">
-                                        <button id="option-submit-btn">
-                                            <input type="radio" name="<%= poll.id %>" id="<%= poll.title %>+<%= option %>">
-                                            <label for="<%= poll.title %>+<%= option %>">
-                                                <%= option %>
-                                            </label><br>
-                                        </button>
+                                        <input type="radio" name="<%= poll.id %>" id="<%= poll.title %>+<%= option %>">
+                                        <label for="<%= poll.title %>+<%= option %>">
+                                            <%= option %>
+                                        </label><br>
                                     </div>
                                     <br>
                                     <% } %>
+                                        <button type="submit">Vote</button>
                             </form>
                         </div>
                     </div>
@@ -52,7 +51,7 @@
         <%- include("includes/contact") %>
             <%- include("includes/footer") %>
 
-            <script src="/public/script.js"></script>
+            <script src="./script.js"></script>
 </body>
 
 </html>
