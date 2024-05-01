@@ -13,26 +13,30 @@
         <div class="signup-wrapper">
 
             <div class="signup">SignUp</div>
-            <form class="signup-form" action="">
+            <form class="signup-form" action="/signup" method="post" >
                 <div class="username">
-                    <input type="text" placeholder="Username" id="username">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" placeholder="Enter Username" id="username" required>
                 </div>
                 <div class="email">
-                    <input type="text" placeholder="Email Address" id="email">
+                    <label for="email">Email Address:</label>
+                    <input type="text" name="email" placeholder="Email Address" id="email" required>
                 </div>
                 <div class="password">
-                    <input type="password" placeholder="Password" id="password">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" placeholder="Password" id="password" required>
                 </div>
                 
                 <button type="submit" class="signup-btn">SignUp</button>
             </form>
             <div class="aMember">
-                Already a member? <a href="login">Login now</a>
+                Already a member? <a href="/login">Login now</a>
             </div>
         </div>
     </div>
     <br><br>
         <%- include("includes/contact") %>
             <%- include("includes/footer") %>
+
 </body>
 </html>

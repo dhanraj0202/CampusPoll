@@ -13,12 +13,15 @@
         <div class="login-wrapper">
 
             <div class="login">Login</div>
-            <form class="login-form" action="">
+            <form class="login-form" action="/login" method="post">
                 <div class="email">
-                    <input type="text" placeholder="Email Address" id="email">
+                    <label for="email">Email Address:</label>
+                    <input type="text" name="email" placeholder="Email Address" id="email" required>
                 </div>
                 <div class="password">
-                    <input type="password" placeholder="Password" id="password">
+                    <label for="password">Password:</label>
+
+                    <input type="password" name="password" placeholder="Password" id="password" required>
                 </div>
                 <div class="remember-forgot">
                     <div class="remember">
@@ -26,14 +29,14 @@
                         <Label for="remember">Remember me</Label>
                     </div>
                     <div class="forgot">
-                        <a href="">Forgot Password</a>
+                        <a href="">Forgot Password?</a>
                     </div>
                     
                 </div>
                 <button type="submit" class="login-btn">Login</button>
             </form>
             <div class="notMember">
-                Not a member? <a href="/polls/signup">Signup now</a>
+                Not a member? <a href="/signup">Signup now</a>
             </div>
         </div>
     </div>
